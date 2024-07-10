@@ -18,7 +18,7 @@
         "clear",
         "&&",
         "timeout",
-        "4s",
+        "5s",
         "/usr/bin/time",
         "-v",
         "--output",
