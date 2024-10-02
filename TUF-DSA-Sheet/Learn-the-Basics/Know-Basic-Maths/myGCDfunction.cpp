@@ -8,7 +8,7 @@ int idk(int A,int B){
         B=A-B;
         A=A-B;
     }
-	return idk(A%B,B);
+	return idk(A-B,B);
 }
 
 
