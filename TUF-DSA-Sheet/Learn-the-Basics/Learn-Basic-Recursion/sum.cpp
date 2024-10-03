@@ -9,9 +9,7 @@ int getSum(int n,int sum){
 
 
 int sumOfSeries(int A){
-	// return getSum(A,0);
-	if (A==0) return 0;
-	return pow(A,3) + sumOfSeries(A-1);
+	return getSum(A,0);
 }
 
 
