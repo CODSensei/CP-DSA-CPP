@@ -18,15 +18,13 @@ int main() {
 	string originalStirng = "";
 	getline(cin,s);
 	for(int i = 0; i<s.length(); i++){
-		if( s[i] != ' ' && iswalnum(s[i])) 
+		if(iswalnum(s[i])) 
 			originalStirng += tolower(s[i]);
 	}
-	cout << originalStirng << endl;
 	for(int i = s.length()-1; i>=0; i--){
-		if( s[i] != ' ' && iswalnum(s[i])) 
+		if(iswalnum(s[i])) 
 			reverseString += tolower(s[i]);
 	}
-	cout << reverseString << endl;
 	if(reverseString == originalStirng) {
 		cout << "True" << endl;
 	} else {
