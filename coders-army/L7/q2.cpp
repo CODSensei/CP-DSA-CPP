@@ -13,10 +13,10 @@ typedef vector<int> vi;
 
     
 int main() {
-    for (int row = 1; row <= 4; row++){
-        char a = 'A';
-        for (char col = 4; col >= row; col--) {
-            cout << a++ << " ";
+    for (int row = 1; row <= 5; row++){
+        for (char col = 1; col <= row; col++) {
+            char a = 'A' + col - 1;
+            cout << a << " ";
         }
         cout << endl;
     }

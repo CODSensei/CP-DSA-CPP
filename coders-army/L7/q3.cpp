@@ -13,10 +13,9 @@ typedef vector<int> vi;
 
     
 int main() {
-    for (int row = 1; row <= 4; row++){
-        char a = 'A';
-        for (char col = 4; col >= row; col--) {
-            cout << a++ << " ";
+    for (int row = 1; row <= 6; row++){
+        for (int col = 1; col <= row; col++) {
+            cout << 10 + col - 1 << " ";
         }
         cout << endl;
     }
