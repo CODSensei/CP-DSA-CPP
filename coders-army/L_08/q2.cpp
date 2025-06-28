@@ -15,10 +15,11 @@ typedef vector<int> vi;
 int main() {
     int n;
     cin >> n;
+    char a = 'A';
     for (int row = 1; row <= n; row++){
-        char a = 'A';
-       for(int col = 1; col <= n-row; col++) cout << "  ";
-        for(int col = row; col >= 1; col--) cout << col << " " ;
+        for(int col = 1; col <= n-row; col++) cout << "  ";
+        for(int col = 1; col <= row; col++) cout << a << " " ;
+        a++;
         cout << endl;
     }
 }

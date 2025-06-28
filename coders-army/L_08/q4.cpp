@@ -16,9 +16,10 @@ int main() {
     int n;
     cin >> n;
     for (int row = 1; row <= n; row++){
-        char a = 'A';
-       for(int col = 1; col <= n-row; col++) cout << "  ";
-        for(int col = row; col >= 1; col--) cout << col << " " ;
+        char a = 'E';
+        for(int col = 1; col <= n-row; col++) cout << "  ";
+        for(int col = 1; col <= row; col++) cout << char(a-col+1) << " " ;
+        a++;
         cout << endl;
     }
 }
