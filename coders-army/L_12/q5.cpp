@@ -18,14 +18,14 @@ int main() {
         rem = n%10;
         n = n/10;
         dec = rem * mul + dec;
-        mul = mul * 8;
+        mul = mul * 2;
     }
 
     cout << "dec = " << dec << endl;
     mul = 1;
     while (dec) {
-        rem = dec % 2;
-        dec = dec / 2;
+        rem = dec % 8;
+        dec = dec / 8;
         ans = rem * mul + ans;
         mul = mul * 10;
     }

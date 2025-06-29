@@ -11,25 +11,17 @@ typedef vector<int> vi;
     
 int main() {
     
-    int n,rem, dec = 0, mul = 1, ans = 0;
+    int n,rem, ans = 0, mul = 1;
     cin >> n;
 
     while (n) {
         rem = n%10;
         n = n/10;
-        dec = rem * mul + dec;
-        mul = mul * 8;
+        ans = rem * mul + ans;
+        mul = mul * 2;
     }
 
-    cout << "dec = " << dec << endl;
-    mul = 1;
-    while (dec) {
-        rem = dec % 2;
-        dec = dec / 2;
-        ans = rem * mul + ans;
-        mul = mul * 10;
-    }
-    cout << "ans = " << ans << endl;
+    cout << ans << endl;
 
     return 0;
 }
