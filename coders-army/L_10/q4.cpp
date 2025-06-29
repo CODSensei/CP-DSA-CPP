@@ -10,9 +10,11 @@ typedef vector<int> vi;
 #define pb push_back
     
 int main() {
-    
-    int a = 98 >> 72;
-    cout << a << endl;
+    int a,b,c;
+    cin >> a >> b >> c;
+    if (a > b || a > c) cout << "yes" << endl;
+    else cout << "no" << endl;
+
 
 
     return 0;
