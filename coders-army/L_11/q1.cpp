@@ -11,17 +11,18 @@ typedef vector<int> vi;
     
 int main() {
     
-    int n, i = 2, c = 0;
+    int n, i = 1,j=1; 
     cin >> n;
-    while (i < n){
-        if (n%i==0) {
-            cout << "Not prime" << endl;
-            c++;
-            break;
-        }
+    while(i <= n){
+        if (i%2==0) cout << i << endl;
         i++;
     }
-    if (!c) cout << "prime" << endl;
+
+
+    do {
+        if (j%2==0) cout << j << " ";
+        j++;
+    } while(j <= n);
 
     return 0;
 }
