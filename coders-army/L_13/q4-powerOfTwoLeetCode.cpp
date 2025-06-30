@@ -9,19 +9,20 @@ typedef vector<int> vi;
 //Macros
 #define pb push_back
     
- bool isUgly(int n) {
-        if (n <= 0) return false;
-        while(n%2 == 0) n/=2;
-        while(n%3 == 0) n/=3;
-        while(n%5 == 0) n/=5;
-        return bool(n==1);
+bool isPowerOfTwo(int n) {
+        if (n<1) return false;
+        while(n!=1){
+            if (n%2==1) return false;
+            n/=2;
+        }
+        return true;
     }
 
 int main() {
    
    int n;
    cin >> n;
-   cout << isUgly(n) << endl;
+   cout << isPowerOfTwo(n) << endl;
 
     return 0;
 }

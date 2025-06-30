@@ -9,19 +9,20 @@ typedef vector<int> vi;
 //Macros
 #define pb push_back
     
- bool isUgly(int n) {
-        if (n <= 0) return false;
-        while(n%2 == 0) n/=2;
-        while(n%3 == 0) n/=3;
-        while(n%5 == 0) n/=5;
-        return bool(n==1);
+int mySqrt(int x) {
+      for(int i = 1; i <= x; i++){
+        if (i > INT_MAX / i) return i-1;
+        if (i*i > x) return i-1;
+        if (i*i == x) return i;
+      }  
+      return 0;
     }
 
 int main() {
    
    int n;
    cin >> n;
-   cout << isUgly(n) << endl;
+   cout << mySqrt(n) << endl;
 
     return 0;
 }
