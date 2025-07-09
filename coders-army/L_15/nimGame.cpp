@@ -9,19 +9,16 @@ typedef vector<int> vi;
 //Macros
 #define pb push_back
 
-int solve(int A, int B, int C) {
-    int n = (C + (A-1))%B;
-    if (n==0) return B;
-    return n;
-    
-}
-    
+bool canWinNim(int n) {
+        if (n%4!=0) return true;
+        return false;
+    }
 
 int main() {
    
-   int a,b,c;
-   cin >> a >> b >> c;
-   cout << solve(a,b,c) << endl;
+   int n;
+   cin >> n;
+   cout << canWinNim(n) << endl;
 
    return 0;
 }

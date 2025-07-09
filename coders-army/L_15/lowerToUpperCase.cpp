@@ -9,19 +9,17 @@ typedef vector<int> vi;
 //Macros
 #define pb push_back
 
-int solve(int A, int B, int C) {
-    int n = (C + (A-1))%B;
-    if (n==0) return B;
-    return n;
-    
+char lowerToUpperCase(char a){
+   return a - 32; // ascii difference is 32
+   // another Way
+   // return a - 'a' + 'A';
 }
-    
 
 int main() {
    
-   int a,b,c;
-   cin >> a >> b >> c;
-   cout << solve(a,b,c) << endl;
+   char a;
+   cin >> a;
+   cout << lowerToUpperCase(a) << endl;
 
    return 0;
 }

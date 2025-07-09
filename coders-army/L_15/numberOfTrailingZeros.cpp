@@ -9,19 +9,20 @@ typedef vector<int> vi;
 //Macros
 #define pb push_back
 
-int solve(int A, int B, int C) {
-    int n = (C + (A-1))%B;
-    if (n==0) return B;
-    return n;
-    
+int trailingZeros(int n){
+   int ans = 0;
+   while(n){
+      ans = ans + (n/5);
+      n=n/5;
+   }
+   return ans;
 }
-    
 
 int main() {
    
-   int a,b,c;
-   cin >> a >> b >> c;
-   cout << solve(a,b,c) << endl;
+   int n;
+   cin >> n;
+   cout << trailingZeros(n) << endl;
 
    return 0;
 }
