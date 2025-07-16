@@ -11,13 +11,16 @@ typedef vector<int> vi;
   
 class Solution {
   public:
-    void rotate(vector<int> &arr) {
+    int search(vector<int>& arr, int x) {
         // code here
-        int temp = arr[arr.size() -1];
-        for(int i = arr.size() - 1; i > 0; i--){
-            arr[i] = arr[i-1];
+        int index = -1;
+        for(int i = 0; i < arr.size(); i++){
+            if (arr[i] == x) {
+                index = i;
+                break;
+            }
         }
-        arr[0] = temp;
+        return index;
     }
 };
 
