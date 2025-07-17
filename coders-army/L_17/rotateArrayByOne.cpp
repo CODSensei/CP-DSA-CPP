@@ -11,14 +11,15 @@ typedef vector<int> vi;
   
 class Solution {
   public:
-    int countFreq(vector<int>& arr, int target) {
+    void rotate(vector<int> &arr) {
         // code here
-        int counter = 0;
-        for(int i = 0; i < arr.size(); i++) if (arr[i] == target) counter++;
-        return counter;
+        int temp = arr[arr.size() -1];
+        for(int i = arr.size() - 1; i > 0; i--){
+            arr[i] = arr[i-1];
+        }
+        arr[0] = temp;
     }
 };
-
 
 int main() {
   

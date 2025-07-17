@@ -11,13 +11,14 @@ typedef vector<int> vi;
   
 class Solution {
   public:
-    void rotate(vector<int> &arr) {
+    int missingNum(vector<int>& arr) {
         // code here
-        int temp = arr[arr.size() -1];
-        for(int i = arr.size() - 1; i > 0; i--){
-            arr[i] = arr[i-1];
-        }
-        arr[0] = temp;
+        int N = arr.size() + 1;
+        int sum = 0;
+        int arraySum = 0;
+        for(int i = 1; i < N+1; i++) sum += i;
+        for(int i = 0; i < N - 1; i++) arraySum += arr[i];
+        return sum - arraySum;
     }
 };
 

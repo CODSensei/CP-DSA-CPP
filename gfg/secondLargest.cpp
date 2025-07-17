@@ -11,13 +11,16 @@ typedef vector<int> vi;
   
 class Solution {
   public:
-    void rotate(vector<int> &arr) {
+    int getSecondLargest(vector<int> &arr) {
         // code here
-        int temp = arr[arr.size() -1];
-        for(int i = arr.size() - 1; i > 0; i--){
-            arr[i] = arr[i-1];
+        int ans = INT_MIN, secondMax = -1;
+        for(int i = 0; i < arr.size(); i++){
+            if (arr[i] > ans) ans = arr[i];
         }
-        arr[0] = temp;
+        for(int i = 0; i < arr.size(); i++){
+            if (arr[i] != ans) secondMax = max(arr[i], secondMax);
+        }
+        return secondMax;
     }
 };
 
