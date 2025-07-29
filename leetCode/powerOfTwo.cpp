@@ -16,6 +16,14 @@ bool isPowerOfTwo(int n) {
             n/=2;
         }
         return true;
+    // alternate way checks if it is even then checks if only power of 2 available or some other numbers too
+     // if (n < 1) return false;
+      //  while(n%2 == 0){
+      //      if (n%2 == 0)
+        //        n /= 2;
+       // }
+        // return n == 1 ? true : false;
+
     }
 
 int main() {

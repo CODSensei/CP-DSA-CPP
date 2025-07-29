@@ -9,15 +9,6 @@ typedef vector<int> vi;
 //Macros
 #define pb push_back
 
-int countDigits(int n){
-   int digits = 0;
-   while(n){
-      n=n/10;
-      digits++;
-   }
-   return digits;
-}
-
 int trailingZeros(int n){
    int ans = 0;
    while(n){
