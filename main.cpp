@@ -11,17 +11,17 @@ typedef vector<int> vi;
   
 class Solution {
 public:
-    int heightChecker(vector<int>& heights) {
-        int counter = 0;
-        vector<int> expected;
-        for(int i = 0; i < heights.size(); i++){
-            expected.push_back(heights[i]);
+    vector<int> findWordsContaining(vector<string>& words, char x) {
+        vector<int> ans;
+        for(int i = 0; i < words.size(); i++){
+            for(int j = 0; j < words[i].size(); j++){
+                if (words[i][j] == x){
+                    ans.push_back(i);
+                    break;
+                }
+            }
         }
-        sort(expected.begin(), expected.end());
-        for(int i = 0; i < heights.size(); i++){
-            if (expected[i] != heights[i]) counter++;
-        }
-        return counter;
+        return ans;
     }
 };
 
