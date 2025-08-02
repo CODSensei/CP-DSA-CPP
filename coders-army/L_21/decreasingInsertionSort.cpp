@@ -11,9 +11,9 @@ typedef vector<int> vi;
   
 // 1st method  
 void insertionSort(vector<int> arr){
-    for(int i = arr.size() - 2; i >= 0; i--){
-        for(int j = i; j < arr.size() - 1; j++){
-            if (arr[j] > arr[j+1]) swap(arr[j],arr[j+1]);
+    for(int i = 1; i < arr.size(); i++){
+        for(int j = i; j > 0; j--){
+            if (arr[j] > arr[j-1]) swap(arr[j],arr[j-1]);
             else break;
         }
     }
