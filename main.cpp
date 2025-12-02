@@ -12,31 +12,32 @@ typedef vector<char> vc;
 
 class Solution {
 public:
-    int findFinalValue(vector<int>& nums, int original) {
-        sort(nums.begin(),nums.end());
-        int n = nums.size();
-        for(int i = 0; i < n; i++){
-            if (nums[i] == original){
-                nums[i] = nums[i] * 2;
-                original = original * 2;
-            }
+    int reverseInt(int x) {
+        int ans = 0, rem = 0;
+        while(x){
+            rem = x%10;
+            ans = (1LL * ans * 10) + rem;
+            x/=10;
         }
-        return original;
+        cout << ans;
+        return ans;
+    }
+    bool isPalindrome(int x) {
+        if (x < 0) return false;
+        return x == reverseInt(x) ? true : false;
     }
 };
 
-int main() {
-    int t;
-    cin >> t;
-    while(t--){
-        int n,k;
-        cin >> n >> k;
-        vector<long long> a(n);
-        for(int i = 0; i < n; i++) cin >> a[i];
-        vector<long long> copy_a = a;
-        sort(copy_a.begin(), copy_a.end());
-        if (copy_a == a || k > 1) cout << "YES" << endl;
-        else cout << "NO" << endl;
-    }
-    return 0;
+
+bool isPalindrome(int x) {
+        if (x < 0) return false;
+        int originalNumber = x, reverseNumber = 0, reminder = 0;
+        while (x) {
+            reminder = x%10;
+            x/=10;
+            if (reverseNumber > INT_MAX / 10) return false;
+            reverseNumber = reverseNumber * 10 + reminder;
+        }
+        if (originalNumber == reverseNumber) return true;
+	return false;
 }
