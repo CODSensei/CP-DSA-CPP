@@ -1,5 +1,7 @@
 #include<bits/stdc++.h>
-#include<stdio.h>
+// #include<stdio.h>
+// #include<iostream>
+
 using namespace std;
 
 // ios::sync_with_stdio(0);
@@ -14,8 +16,8 @@ typedef vector<char> vc;
 #define pb push_back
 
 int main() {
-    int n;
-    cin >> n;
-    cout << n;
+    
+    
+
     return 0;
 }
